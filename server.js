@@ -1,0 +1,15 @@
+const express = require("express");
+const app = express();
+const db = require("./db.js");
+const schoolRouter = require("./routes/schoolRouter.js");
+
+app.use(express.json()); // Middleware to parse JSON
+
+// Endpoint: /addSchool
+app.use("/", schoolRouter);
+
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+   console.log(`Server is running on port ${PORT}`);
+});
