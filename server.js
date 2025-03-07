@@ -1,6 +1,7 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
-const db = require("./db.js");
+require("./db.js");
 const schoolRouter = require("./routes/schoolRouter.js");
 
 app.use(express.json()); // Middleware to parse JSON
