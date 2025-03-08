@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 require("./db.js");
 const schoolRouter = require("./routes/schoolRouter.js");
+const pool = require("./db.js");
 
 app.use(express.json()); // Middleware to parse JSON
 
